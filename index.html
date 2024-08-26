@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download-button | Progress</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="button">
+        <div class="content">
+            <i class="bx bx-cloud-download"></i>
+            <span class="button-text">Download</span>
+        </div>
+    </div>
+</body>
+
+<script>
+    let button = document.querySelector('.button');
+    // const content = document.querySelector('.content');
+
+    button.addEventListener('click', () => {
+        button.classList.add('active');
+        setTimeout(()=>{
+            document.querySelector('i').classList.replace("bx-cloud-download" , "bx-check-circle")
+            button.classList.remove('active');
+            document.querySelector(".button-text").innerText = "Completed";
+        },6000)
+    })
+</script>
+</html>
